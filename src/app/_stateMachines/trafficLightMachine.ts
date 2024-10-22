@@ -10,25 +10,25 @@ export const trafficLightMachine = setup({
       | { type: "TOGGLE_ON_OFF" },
   },
 }).createMachine({
-  /** @xstate-layout N4IgpgJg5mDOIC5QAoC2BDAxgCwJYDswBKAYgGEAJAQQDkBxAUQG0AGAXUVAAcB7WXAC64e+TiAAeiALQBGAGwyAdACYFAdhkBONQGYZOljrUAaEAE9EMgKwAWRQA4ZM+1bXKbynZquaAvr9M0LDxCUgAVAFUAJRoAfQB5ADFE1g4kEF5+IRExSQR9FR05bTk5ex0dGzk1NStTC3yWNRU1G109XRtbGTV-QIwcAmISSJiEmlSxTMFhUXS8+UUq5XtNFjkKqyMWTR16y2V-AJB8Hgg4MSDB0Km+GZz5yxNzRANlB3ctb2VDOXdeo5AA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QAoC2BDAxgCwJYDswBKAYgGEAJAQQDkBxAUQG0AGAXUVAAcB7WXAC64e+TiAAeiAEwA2AOwA6AJwAWFnJVyAzDICsWlioCMAGhABPaUsUAOKcaVLdUljvtyAvh7NoseQqQAKgCqAEo0APoA8gBiMawcSCC8-EIiYpIIskYKWs4uKvpGckpacrpmllksUgq6KqoyMloqMkosNlpePhg4BMQkIeHRNAliKYLCokmZsip1cjZGRjYqS0qrlYhG6gpSGtpaxS31RirdIL59AYNRdHQAMgwj0XFjSRNp06CzZQosLGsuichWKRikNi2CHBFyu-mICjooQYDBo5Go9GY7HGfEm6Rm210MgUKhcRPaRzkLBkKhUUPqtS0Nn0SjOwLa5VhvXhRAUAE0GA8HlEAOro2iMd7cXFfDKINQsBRnUGslzKyEWRAM3LMrSswpKDm6Ll+fq85EAEXFmKlyRlUzlCAVStpuiMqpY6qhpJy1lkR2sqikes8F3wPAgcDEcLNONSDoJCAAtKZNQgtC0FDTrCs1oDAU0TdcEUiUTQ43jvhJ5XJvfsFHIpFIVjYNC5DudvJduWb+YLhSKK7LExCtCTdJ0pM5OnrnPTSXV9DoamcgUYizyFJahwmflr6ysm+UyisMzJvQY9k33XIaQYM8avB4gA */
   context: {
     isOn: true,
   },
-  initial: "GREEN",
+  initial: "green",
   states: {
-    GREEN: {
+    green: {
       on: {
-        CHANGE: "YELLOW",
+        CHANGE: "yellow",
       },
     },
-    YELLOW: {
+    yellow: {
       on: {
-        CHANGE: "RED",
+        CHANGE: "red",
       },
     },
-    RED: {
+    red: {
       on: {
-        CHANGE: "GREEN",
+        CHANGE: "green",
       },
     },
   },

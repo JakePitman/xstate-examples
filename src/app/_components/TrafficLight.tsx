@@ -13,21 +13,21 @@ export const TrafficLight = () => {
       <div className="flex flex-col">
         <button
           className={cx("w-16 h-16 border rounded-[50%]", {
-            "bg-green-500": isOn && value === "GREEN",
+            "bg-green-500": isOn && value === "green",
           })}
         >
           Green
         </button>
         <button
           className={cx("w-16 h-16 border rounded-[50%]", {
-            "bg-yellow-500": isOn && value === "YELLOW",
+            "bg-yellow-500": isOn && value === "yellow",
           })}
         >
           Yellow
         </button>
         <button
           className={cx("w-16 h-16 border rounded-[50%]", {
-            "bg-red-500": isOn && value === "RED",
+            "bg-red-500": isOn && value === "red",
           })}
         >
           Red
