@@ -1,8 +1,11 @@
 import { setup, assign, createActor } from "xstate";
 
+type Context = {
+  isOn: boolean;
+};
 export const trafficLightMachine = setup({
   types: {
-    context: {} as { isOn: boolean },
+    context: {} as Context,
     events: {} as
       | { type: "CHANGE" }
       | { type: "TURN_OFF" }
